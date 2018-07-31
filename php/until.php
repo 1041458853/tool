@@ -6,6 +6,15 @@
  * Time: 15:23
  */
 
+
+/*
+* 定义请求数据的方法,如GET、POST、AJAX
+*/
+define('IS_POST',strtolower($_SERVER["REQUEST_METHOD"]) == 'post');//判断是否是post方法
+define('IS_GET',strtolower($_SERVER["REQUEST_METHOD"]) == 'get');//判断是否是get方法
+define('IS_AJAX',isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');//判断是否是ajax请求
+
+
 /*
 * array unique_rand( int $min, int $max, int $num )
 * 生成一定数量的不重复随机数
